@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20",
+  "lastUpdated": "2026-04-29",
   "providers": [
     {
       "name": "Cohere",
@@ -1072,6 +1072,106 @@
           "rateLimit": "1,000 RPM, 50K TPM"
         }
       ]
+    },
+    {
+      "name": "OVHcloud AI Endpoints",
+      "category": "inference_provider",
+      "country": "FR",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "url": "https://endpoints.ai.cloud.ovh.net/",
+      "baseUrl": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+      "description": "Free anonymous tier (no API key, no signup): 2 RPM per IP per model. 40+ open-weight models hosted in EU. OpenAI SDK-compatible.",
+      "footnoteRef": 7,
+      "models": [
+        {
+          "id": "Meta-Llama-3_3-70B-Instruct",
+          "name": "Meta-Llama-3_3-70B-Instruct",
+          "context": "131K",
+          "maxOutput": "~4K",
+          "modality": "Text",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Meta-Llama-3_1-8B-Instruct",
+          "name": "Meta-Llama-3_1-8B-Instruct",
+          "context": "131K",
+          "maxOutput": "~4K",
+          "modality": "Text",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "DeepSeek-R1-Distill-Llama-70B",
+          "name": "DeepSeek-R1-Distill-Llama-70B",
+          "context": "131K",
+          "maxOutput": "~32K",
+          "modality": "Text (reasoning)",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Qwen3-32B",
+          "name": "Qwen3-32B",
+          "context": "131K",
+          "maxOutput": "~32K",
+          "modality": "Text",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Qwen3-Coder-30B-A3B-Instruct",
+          "name": "Qwen3-Coder-30B-A3B-Instruct",
+          "context": "262K",
+          "maxOutput": "~32K",
+          "modality": "Text (code)",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Qwen2.5-VL-72B-Instruct",
+          "name": "Qwen2.5-VL-72B-Instruct",
+          "context": "128K",
+          "maxOutput": "~8K",
+          "modality": "Text + Vision",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Mixtral-8x7B-Instruct-v0.1",
+          "name": "Mixtral-8x7B-Instruct-v0.1",
+          "context": "32K",
+          "maxOutput": "~4K",
+          "modality": "Text",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Mistral-Nemo-Instruct-2407",
+          "name": "Mistral-Nemo-Instruct-2407",
+          "context": "128K",
+          "maxOutput": "~4K",
+          "modality": "Text",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Qwen3Guard-Gen-8B",
+          "name": "Qwen3Guard-Gen-8B",
+          "context": "32K",
+          "maxOutput": "~4K",
+          "modality": "Text (safety guard)",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": "Qwen3Guard-Gen-0.6B",
+          "name": "Qwen3Guard-Gen-0.6B",
+          "context": "32K",
+          "maxOutput": "~4K",
+          "modality": "Text (safety guard)",
+          "rateLimit": "2 RPM (anonymous)"
+        },
+        {
+          "id": null,
+          "name": "+ 30 more models",
+          "context": "Varies",
+          "maxOutput": "Varies",
+          "modality": "Text, Vision, Code, Image, Speech",
+          "rateLimit": "2 RPM (anonymous)"
+        }
+      ]
     }
   ],
   "footnotes": [
@@ -1098,6 +1198,10 @@
     {
       "id": 6,
       "text": "API-Inference is free for registered users. Current published limits are 2,000 requests/day per user (total across models), with per-model daily quotas dynamically adjusted and capped at 500; concurrency is also dynamically rate-limited. Requires Alibaba Cloud account binding and real-name verification ([limits](https://modelscope.cn/docs/model-service/API-Inference/limits), [intro](https://modelscope.cn/docs/model-service/API-Inference/intro))."
+    },
+    {
+      "id": 7,
+      "text": "OVHcloud AI Endpoints offers a permanent free anonymous tier (2 requests per minute per IP, per model) with no signup or API key required \u2014 click \"Get your free token\" at [endpoints.ai.cloud.ovh.net](https://endpoints.ai.cloud.ovh.net/). Higher rate limits (400 RPM per Public Cloud project per model) require an API key and are billed pay-as-you-go per token; new Public Cloud accounts get up to $200 in free trial credits. Models are hosted in EU data centers."
     }
   ],
   "glossary": [

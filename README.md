@@ -266,6 +266,26 @@ Base URL: `https://openrouter.ai/api/v1`
 | mistralai/devstral-2512:free           | 256K    | ~32K       | Text             | 20 RPM, 200 RPD |
 | + ~23 more free models                 | Varies  | Varies     | Text / Image     | 20 RPM, 200 RPD |
 
+### [OVHcloud AI Endpoints](https://endpoints.ai.cloud.ovh.net/) 🇫🇷
+
+Free anonymous tier (no API key, no signup): 2 RPM per IP per model. 40+ open-weight models hosted in EU. OpenAI SDK-compatible. [^7]
+
+Base URL: `https://oai.endpoints.kepler.ai.cloud.ovh.net/v1`
+
+| Model Name                    | Context | Max Output | Modality                          | Rate Limit        |
+| ----------------------------- | ------- | ---------- | --------------------------------- | ----------------- |
+| Meta-Llama-3_3-70B-Instruct   | 131K    | ~4K        | Text                              | 2 RPM (anonymous) |
+| Meta-Llama-3_1-8B-Instruct    | 131K    | ~4K        | Text                              | 2 RPM (anonymous) |
+| DeepSeek-R1-Distill-Llama-70B | 131K    | ~32K       | Text (reasoning)                  | 2 RPM (anonymous) |
+| Qwen3-32B                     | 131K    | ~32K       | Text                              | 2 RPM (anonymous) |
+| Qwen3-Coder-30B-A3B-Instruct  | 262K    | ~32K       | Text (code)                       | 2 RPM (anonymous) |
+| Qwen2.5-VL-72B-Instruct       | 128K    | ~8K        | Text + Vision                     | 2 RPM (anonymous) |
+| Mixtral-8x7B-Instruct-v0.1    | 32K     | ~4K        | Text                              | 2 RPM (anonymous) |
+| Mistral-Nemo-Instruct-2407    | 128K    | ~4K        | Text                              | 2 RPM (anonymous) |
+| Qwen3Guard-Gen-8B             | 32K     | ~4K        | Text (safety guard)               | 2 RPM (anonymous) |
+| Qwen3Guard-Gen-0.6B           | 32K     | ~4K        | Text (safety guard)               | 2 RPM (anonymous) |
+| + 30 more models              | Varies  | Varies     | Text, Vision, Code, Image, Speech | 2 RPM (anonymous) |
+
 ### [SiliconFlow](https://cloud.siliconflow.cn/account/ak) 🇨🇳
 
 Free tier with 14 CNY signup credits. Permanently free models available.
@@ -302,3 +322,4 @@ Know a free tier that's missing? [Open a PR](contributing.md). Include the provi
 [^4]: Free models default to 200 RPD. A one-time purchase of $10+ in credits unlocks 1,000 RPD for free models. OpenRouter also offers a [Free Models Router](https://openrouter.ai/docs/guides/routing/routers/free-models-router) (`openrouter/free`) and [model fallbacks](https://openrouter.ai/docs/guides/routing/model-fallbacks) for chaining models in priority order.
 [^5]: Kilo Code free model list may change over time. nvidia/nemotron-3-super-120b-a12b:free is for trial use only — prompts are logged by NVIDIA. Auto-router `kilo-auto/free` routes to minimax/minimax-m2.5:free (80%) and stepfun/step-3.5-flash:free (20%).
 [^6]: API-Inference is free for registered users. Current published limits are 2,000 requests/day per user (total across models), with per-model daily quotas dynamically adjusted and capped at 500; concurrency is also dynamically rate-limited. Requires Alibaba Cloud account binding and real-name verification ([limits](https://modelscope.cn/docs/model-service/API-Inference/limits), [intro](https://modelscope.cn/docs/model-service/API-Inference/intro)).
+[^7]: OVHcloud AI Endpoints offers a permanent free anonymous tier (2 requests per minute per IP, per model) with no signup or API key required — click "Get your free token" at [endpoints.ai.cloud.ovh.net](https://endpoints.ai.cloud.ovh.net/). Higher rate limits (400 RPM per Public Cloud project per model) require an API key and are billed pay-as-you-go per token; new Public Cloud accounts get up to $200 in free trial credits. Models are hosted in EU data centers.
